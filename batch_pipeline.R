@@ -10,7 +10,7 @@ speeches <- speeches[sample(1:nrow(speeches),
                             nrow(speeches)/10000),]
 
 
-#library(microbenchmark)
+library(microbenchmark)
 #microbenchmark(preprocessing_opendiscourse(speeches),
 #               unit = "seconds")
 
@@ -27,10 +27,10 @@ download_rauh_dict()
 # takes 403 seconds for 0.01 per cent
 # would take 46.6 days
 
-#microbenchmark(df <- resolve_negations(speeches), 
-#               unit = "seconds", times = 1)
+microbenchmark(df <- resolve_negations(speeches), 
+               unit = "seconds", times = 1)
 
-df <- resolve_negations(speeches)
+#df <- resolve_negations(speeches)
 saveRDS(df, file="./corpus/negation.RDS")
 
 
