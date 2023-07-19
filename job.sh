@@ -1,8 +1,9 @@
 #!/bin/bash
 
-#SBATCH --ntasks=1
-#SBATCH --time=30
-#SBATCH --mem=32gb
+#SBATCH --nodes=2
+#SBATCH --ntasks=16
+#SBATCH --time=24:00:00
+#SBATCH --mem=64gb
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=uwe.remer@sowi.uni-stuttgart.de
 #SBATCH --output=job.out

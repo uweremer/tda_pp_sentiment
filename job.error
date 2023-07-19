@@ -1,0 +1,13 @@
+Loading module dependency 'compiler/intel/2021.4.0'.
+Loading module dependency 'numlib/mkl/2021.4.0'.
+Loading required package: httr
+traget directory... exists.
+traget directory... exists.
+Loading required package: foreach
+Loading required package: doParallel
+Loading required package: iterators
+Loading required package: parallel
+Number of cores registered: 124
+Warning message:
+In split.default(x = seq_len(nrow(x)), f = f, drop = drop, ...) :
+  data length is not a multiple of split variable

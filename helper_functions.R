@@ -119,7 +119,7 @@ resolve_negations <- function(speeches){
   require(doParallel)
   
   
-  path <- "./dict/JITP-Replication-Final/1_Dictionaries/"
+  path <- "./dict/"
   load(paste0(path, "Rauh_SentDictionaryGerman_Negation.Rdata"))
   load(paste0(path, "Rauh_SentDictionaryGerman.Rdata"))  
   
@@ -134,7 +134,8 @@ resolve_negations <- function(speeches){
     return(speeches)
   }
   
-  nc <- detectCores()
+  #nc <- detectCores()
+  nc <- 124
   message(paste0("Number of cores registered: ", nc))
   list_dfs <- split(speeches, rep(1:nc, each=round(nrow(speeches)/nc)))
   

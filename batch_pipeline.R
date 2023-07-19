@@ -6,15 +6,15 @@ speeches <- import_opendiscourse()
 #saveRDS(speeches, file="merged_speeches.RDS")
 
 #subset for microbenchmarking: 0.01 percent
-speeches <- speeches[sample(1:nrow(speeches),
-                            nrow(speeches)/10000),]
+speeches <- speeches[speeches$electoral_term >= 18,]
 
 
 library(microbenchmark)
-#microbenchmark(preprocessing_opendiscourse(speeches),
-#               unit = "seconds")
 
 speeches <- preprocessing_opendiscourse(speeches)
+#saveRDS(speeches, file="./corpus/preprocessed.RDS")
+#speeches <- load(file="./corpus/preprocessed.RDS")
+
 download_rauh_dict()
 
 #path <- "./dict/JITP-Replication-Final/1_Dictionaries/"

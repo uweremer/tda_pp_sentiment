@@ -1,0 +1,20 @@
+Unit: seconds
+                              expr      min       lq     mean   median       uq
+ df <- resolve_negations(speeches) 5465.934 5465.934 5465.934 5465.934 5465.934
+      max neval
+ 5465.934     1
+
+============================= JOB FEEDBACK =============================
+
+NodeName=uc2n[707-708]
+Job ID: 22441867
+Cluster: uc2
+User/Group: st_ac104447/st_us-100270
+State: COMPLETED (exit code 0)
+Nodes: 2
+Cores per node: 128
+CPU Utilized: 00:01:37
+CPU Efficiency: 0.01% of 16-11:18:24 core-walltime
+Job Wall-clock time: 01:32:39
+Memory Utilized: 2.68 GB
+Memory Efficiency: 2.09% of 128.00 GB
